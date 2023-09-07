@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  app:
+    image: nksdaoxxso/mystrom-python-mqtt:latest
+    restart: unless-stopped
+    environment:
+      MQTT_SERVER_ADDRESS: ...
