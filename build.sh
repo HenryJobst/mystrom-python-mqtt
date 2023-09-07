@@ -1,1 +1,1 @@
-docker build --no-cache -t nksdaoxxso/mystrom-python:latest .
+docker build --no-cache -t nksdaoxxso/mystrom-python-mqtt:latest .
