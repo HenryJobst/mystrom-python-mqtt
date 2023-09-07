@@ -37,6 +37,6 @@ python -m main
 ```sh
 docker run \
     --name mystrom-python-mqtt \
-    --env-file .env \
+    --env-file .env -d \
     nksdaoxxso/mystrom-python-mqtt:latest
 ```
