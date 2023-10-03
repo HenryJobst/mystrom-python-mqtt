@@ -2,6 +2,7 @@ version: '3.4'
 
 services:
   app:
+    container_name: mystrom-python-mqtt
     image: nksdaoxxso/mystrom-python-mqtt:1.1.0
     restart: unless-stopped
     env_file:
