@@ -18,7 +18,7 @@ def trigger():
     mqtt_user = os.getenv('MQTT_SERVER_USER')
     mqtt_pw = os.getenv('MQTT_SERVER_PASSWORD')
     mqtt_client_id = os.getenv('MQTT_CLIENT_ID')
-    mqtt_topic = os.getenv('MYSTROM_TOPIC')
+    mqtt_topic = os.getenv('MQTT_CLIENT_TOPIC')
     mqtt_tz = os.getenv('MYSTROM_SERVER_TZ')
     request_data_and_push(device_ip, mqtt_ip, mqtt_user, mqtt_pw, mqtt_client_id, mqtt_topic, mqtt_tz)
 
@@ -61,7 +61,7 @@ async def push(response: dict, client_id: str, topic: str, ip: str, user: str, p
         payload = f'{{"Time": "{formatted_time}", "{response["boot_id"]}": {{' \
             f'"power": {response["power"]}, ' \
             f'"Ws": {response["Ws"]}, ' \
-            f'"relay": {"true" if response["relay"] else "true"}, ' \
+            f'"relay": {"true" if response["relay"] else "false"}, ' \
             f'"temperature": {response["temperature"]} }} }}'
         # noinspection PyTypeChecker
         await client.publish(topic, payload=payload)
