@@ -1,4 +1,4 @@
-aiomqtt==1.2.1
+aiomqtt==2.5.1
 certifi==2023.11.17
 charset-normalizer==3.4.7
 idna==3.17
