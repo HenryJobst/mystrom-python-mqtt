@@ -57,7 +57,7 @@ async def push(response: dict, client_id: str, topic: str, ip: str, user: str, p
     berlin_timezone = pytz.timezone(tz)
     current_time = datetime.datetime.now(berlin_timezone)
     formatted_time = current_time.strftime('%Y-%m-%dT%H:%M:%S')
-    async with Client(hostname=ip, username=user, password=pw, client_id=client_id) as client:
+    async with Client(hostname=ip, username=user, password=pw, identifier=client_id) as client:
         payload = f'{{"Time": "{formatted_time}", "{response["boot_id"]}": {{' \
             f'"power": {response["power"]}, ' \
             f'"Ws": {response["Ws"]}, ' \

@@ -1,8 +1,8 @@
-aiomqtt==1.2.1
+aiomqtt==2.5.1
 certifi==2026.5.20
 charset-normalizer==3.4.7
 idna==3.17
-paho-mqtt==1.6.1
+paho-mqtt==2.1.0
 python-dotenv==1.2.2
 requests==2.34.2
 schedule==1.2.2
