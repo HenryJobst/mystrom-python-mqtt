@@ -1,6 +1,6 @@
 aiomqtt==2.5.1
 certifi==2026.5.20
-charset-normalizer==3.4.7
+charset-normalizer==3.5.1
 idna==3.17
 paho-mqtt==2.1.0
 python-dotenv==1.2.2
